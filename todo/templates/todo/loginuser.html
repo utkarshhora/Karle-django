@@ -1,0 +1,42 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'todo/login_style.css' %}">
+
+
+<div class="login-box">
+  <h3 style="color: white; margin-left:40px;" >{{error}}</h3>
+
+    <h2>Login</h2>
+    <form method="post">
+      {% csrf_token %}
+        <div class="user-box">
+            <input type="username" name="username" required="">
+            <label style="margin-bottom:35px;">Username</label>
+        </div>
+        <div class="user-box">
+            <input type="password" name="password">
+            <label for="">Password</label>
+        </div>
+        <a href="">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Karle
+        </a>
+        <button type="submit" name="login" class="btn btn-light" style="margin-left:110px; margin-bottom:30px;">Login</button>
+    </form>
+</div>
+
+
+
+<div>
+  <div class="starsec"></div>
+  <div class="starthird"></div>
+  <div class="starfourth"></div>
+  <div class="starfifth"></div>
+</div>
+{% endblock %}

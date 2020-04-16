@@ -1,0 +1,15 @@
+
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'todo/signup_style.css' %}">
+
+<h1>SignUp</h1>
+<h3>{{error}}</h3>
+
+<div class="contact-us">
+  <form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" name="signup">SignUp</button>
+  </form>
+</div>
